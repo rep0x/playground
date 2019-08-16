@@ -2,26 +2,31 @@
   "name": "Hazlenuzz",
   "motto": "I am a digital creative focusing on mixing, mastering and sound design.",
   "avatar_url": "https://i1.sndcdn.com/avatars-000151556948-5bc3ks-t500x500.jpg",
-  "colors": [
+  "skills": [
     {
-      "name": "black",
-      "hex_code": "062035"
+      "name": "HTML",
+      "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
+      "category": "Coding"
     },
     {
       "name": "dark",
-      "hex_code": "1E3548"
+      "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
+      "category": "Design"
     },
     {
       "name": "primary",
-      "hex_code": "E4833E"
+      "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
+      "category": ""
     },
     {
       "name": "light",
-      "hex_code": "efefef"
+      "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
+      "category": ""
     },
     {
       "name": "white",
-      "hex_code": "ffffff"
+      "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
+      "category": ""
     }
   ]
 }
