@@ -1,0 +1,27 @@
+{
+  "name": "Hazlenuzz",
+  "motto": "I am a digital creative focusing on mixing, mastering and sound design.",
+  "avatar_url": "https://i1.sndcdn.com/avatars-000151556948-5bc3ks-t500x500.jpg",
+  "colors": [
+    {
+      "name": "black",
+      "hex_code": "062035"
+    },
+    {
+      "name": "dark",
+      "hex_code": "1E3548"
+    },
+    {
+      "name": "primary",
+      "hex_code": "E4833E"
+    },
+    {
+      "name": "light",
+      "hex_code": "efefef"
+    },
+    {
+      "name": "white",
+      "hex_code": "ffffff"
+    }
+  ]
+}
