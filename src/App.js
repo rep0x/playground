@@ -10,7 +10,7 @@ import Ipfs from 'ipfs'
 
 // C O M P O N E N T S
 import Skills from './components/Skills'
-import IPFS from './components/Ipfs'
+import IpfsStatus from './components/IpfsStatus'
 
 const App = () => {
   const { ipfs, ipfsInitError } = useIpfsFactory({
@@ -54,12 +54,11 @@ const App = () => {
     setName(e.target.value)
   }
 
-  const onSubmit = (e) => {
-
-    console.log("ipfs", ipfs)
-    e.preventDefault();
+  const onSubmit = e => {
+    console.log('ipfs', ipfs)
+    e.preventDefault()
     return
-    console.log("name", name)
+    console.log('name', name)
 
     const data = {
       name: name,
@@ -67,10 +66,9 @@ const App = () => {
     }
     const content = Ipfs.Buffer.from(JSON.stringify(data))
 
-    ipfs.add(content).then(function (results) {
-
+    ipfs.add(content).then(function(results) {
       const hash = results[0].hash // "Qm...WW"
-      console.log("hash", hash)
+      console.log('hash', hash)
     })
   }
 
@@ -88,9 +86,8 @@ const App = () => {
 
   return (
     <div className='App'>
-      <IPFS />
+      <IpfsStatus />
       <div className='profile'>
-        {id && <IpfsId {...id} />}
         <img
           className='profile--avatar'
           src={profileData.avatar_url}
@@ -105,29 +102,6 @@ const App = () => {
         Edit
       </button>
     </div>
-  )
-}
-
-const Title = ({ children }) => {
-  return <h2 className='f5 ma0 pb2 tracked aqua fw4 montserrat'>{children}</h2>
-}
-
-const IpfsId = props => {
-  if (!props) return null
-  return (
-    <section className='bg-snow mw7 center mt5'>
-      <h1 className='f3 fw4 ma0 pv3 aqua montserrat tc'>Connected to IPFS</h1>
-      <div className='pa4'>
-        {['id', 'agentVersion'].map(key => (
-          <div className='mb4' key={key}>
-            <Title>{key}</Title>
-            <div className='bg-white pa2 br2 truncate monospace'>
-              {props[key]}
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
   )
 }
 
