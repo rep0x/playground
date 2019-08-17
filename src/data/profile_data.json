@@ -10,22 +10,22 @@
     },
     {
       "name": "CSS",
-      "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
+      "icon_url": "https://seeklogo.com/images/C/css3-logo-8724075274-seeklogo.com.png",
       "category": "Coding"
     },
     {
       "name": "JS",
-      "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
+      "icon_url": "https://seeklogo.com/images/J/javascript-logo-E967E87D74-seeklogo.com.png",
       "category": "Coding"
     },
     {
       "name": "React",
-      "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
+      "icon_url": "https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png",
       "category": "Coding"
     },
     {
       "name": "Ruby on Rails",
-      "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
+      "icon_url": "https://seeklogo.com/images/R/ruby-on-rails-logo-95951CC5FB-seeklogo.com.png",
       "category": "Coding"
     }
   ]
