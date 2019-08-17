@@ -9,24 +9,24 @@
       "category": "Coding"
     },
     {
-      "name": "dark",
+      "name": "CSS",
       "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
-      "category": "Design"
+      "category": "Coding"
     },
     {
-      "name": "primary",
+      "name": "JS",
       "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
-      "category": ""
+      "category": "Coding"
     },
     {
-      "name": "light",
+      "name": "React",
       "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
-      "category": ""
+      "category": "Coding"
     },
     {
-      "name": "white",
+      "name": "Ruby on Rails",
       "icon_url": "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
-      "category": ""
+      "category": "Coding"
     }
   ]
 }

@@ -1,0 +1,9 @@
+.skills {
+  display: flex;
+  .skill {
+    flex: 1;
+    img {
+      height: 50px;
+    }
+  }
+}
