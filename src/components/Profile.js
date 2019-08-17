@@ -31,8 +31,8 @@ const Profile = () => {
         console.log('oben', path)
         ipfs.get(path, function(err, files) {
           files.forEach(file => {
-            console.log(file.path)
-            console.log(file.content.toString('utf8'))
+            let user = JSON.parse(file.content.toString('utf8'))
+            setProfileData(user)
           })
         })
       }
@@ -91,8 +91,8 @@ const Profile = () => {
           alt={`${profileData.name}s profile avatar`}
         />
         <h1 className='profile--name'>{profileData.name}</h1>
-        <h3 className='profile--motto'>{profileData.motto}</h3>
-        <Skills skills={profileData.skills} />
+        {/* <h3 className='profile--motto'>{profileData.motto}</h3>
+        <Skills skills={profileData.skills} /> */}
       </div>
     </div>
   )
