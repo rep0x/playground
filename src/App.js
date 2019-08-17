@@ -23,15 +23,28 @@ const App = () => {
 
   const [name, setName] = useState(profileData.name)
 
-  console.log("ipfs", ipfs)
-  if (ipfs) {
-    ipfs.get("QmPJjEqjTEWp6RZQJBwRTmWVfFnfynqeEfoJu5aExsMh7n", function (err, files) {
-      files.forEach((file) => {
-        console.log(file.path)
-        console.log(file.content.toString('utf8'))
-      })
-    })
-  }
+  useEffect(() => {
+    console.log("ipfs", ipfs)
+
+    if (ipfs) {
+      console.log(window.location.pathname)
+
+      let path = window.location.pathname.substring(1)
+      if (path) {
+        //TODO Check if path is valid ipfs hash
+        console.log("oben", path)
+        ipfs.get(path, function (err, files) {
+          files.forEach((file) => {
+            console.log(file.path)
+            console.log(file.content.toString('utf8'))
+          })
+        })
+      }
+
+    }
+  }, [ipfs])
+
+
 
   const toggleEditable = () => {
     setIsEditable(!isEditable)
