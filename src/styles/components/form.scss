@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  &--field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  &--label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  &--input {
+    background-color: var(--light);
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    font-size: 14px;
+    outline: none;
+    &:focus {
+      box-shadow: 0 0 6px var(--primary);
+    }
+  }
+}

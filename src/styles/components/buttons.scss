@@ -1,10 +1,23 @@
 .btn {
   padding: 15px 30px;
   border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  border: none;
   &-dark {
     background-color: var(--dark);
     color: var(--white);
-    font-size: 16px;
-    font-weight: bold;
   }
+  &-primary {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+  &-light {
+    background-color: var(--light);
+    color: var(--black);
+  }
+}
+.btn.hidden {
+  display: none;
 }

@@ -24,6 +24,7 @@ code {
 
 .profile {
   text-align: center;
+  width: 600px;
   &--avatar {
     border-radius: 50%;
     height: 250px;
@@ -31,4 +32,8 @@ code {
   &--name {
     font-size: 46px;
   }
+}
+
+h1 {
+  font-size: 42px;
 }
