@@ -1,15 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { css } from '@emotion/core'
+// First way to import
+import { DotLoader } from 'react-spinners'
 
 // I P F S
 import useIpfsFactory from '../hooks/use-ipfs-factory.js'
 import useIpfs from '../hooks/use-ipfs.js'
 
 const IpfsStatus = () => {
+  const [ipfsStatus, setIpfsStatus] = useState('pending')
+  const [loading, setLoading] = useState(true)
   const { ipfs, ipfsInitError } = useIpfsFactory({
     commands: ['id']
   })
+
   const id = useIpfs(ipfs, 'id')
-  return <div>{id && <IpfsId {...id} />}</div>
+  const override = css`
+    margin-right: 15px;
+  `
+  return (
+    <div className='alert'>
+      <DotLoader
+        css={override}
+        sizeUnit={'px'}
+        size={30}
+        color={'var(--primary)'}
+        loading={loading}
+      />
+      <span className='alert--msg'>Connecting to IPFS</span>
+      {/* {id && <IpfsId {...id} />} */}
+    </div>
+  )
 }
 
 const Title = ({ children }) => {

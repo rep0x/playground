@@ -25,7 +25,7 @@ const App = () => {
   })
 
   let layoutOutput
-  if (layout === 'profile') layoutOutput = <Profile />
+  if (layout === 'profile') layoutOutput = <Profile ipfs={ipfs} />
   else layoutOutput = <Home />
 
   return <div className='App'>{layoutOutput}</div>

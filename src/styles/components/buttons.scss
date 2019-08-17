@@ -5,6 +5,7 @@
   font-weight: bold;
   outline: none;
   border: none;
+  text-align: center;
   &-dark {
     background-color: var(--dark);
     color: var(--white);
@@ -17,7 +18,24 @@
     background-color: var(--light);
     color: var(--black);
   }
+  &-white {
+    background-color: var(--white);
+    color: var(--black);
+  }
+  &:focus {
+    box-shadow: 0 0 6px var(--primary);
+  }
+  &:hover {
+    box-shadow: 0 0 6px var(--primary);
+    cursor: pointer;
+    transition: var(--transition);
+  }
 }
 .btn.hidden {
   display: none;
+}
+.btn.edit {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
 }
