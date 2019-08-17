@@ -9,6 +9,7 @@ import useIpfs from './hooks/use-ipfs.js'
 
 // C O M P O N E N T S
 import Skills from './components/Skills'
+import IPFS from './components/Ipfs'
 
 const App = () => {
   const { ipfs, ipfsInitError } = useIpfsFactory({
@@ -43,6 +44,7 @@ const App = () => {
 
   return (
     <div className='App'>
+      <IPFS />
       <div className='profile'>
         {id && <IpfsId {...id} />}
         <img
