@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // D A T A
 import initialProfileData from './data/profile_data.json'
@@ -6,6 +6,7 @@ import initialProfileData from './data/profile_data.json'
 // I P F S
 import useIpfsFactory from './hooks/use-ipfs-factory.js'
 import useIpfs from './hooks/use-ipfs.js'
+import Ipfs from 'ipfs'
 
 // C O M P O N E N T S
 import Skills from './components/Skills'
@@ -17,8 +18,20 @@ const App = () => {
   })
   const id = useIpfs(ipfs, 'id')
   const [profileData, setProfileData] = useState(initialProfileData)
+
   const [isEditable, setIsEditable] = useState(false)
+
   const [name, setName] = useState(profileData.name)
+
+  console.log("ipfs", ipfs)
+  if (ipfs) {
+    ipfs.get("QmPJjEqjTEWp6RZQJBwRTmWVfFnfynqeEfoJu5aExsMh7n", function (err, files) {
+      files.forEach((file) => {
+        console.log(file.path)
+        console.log(file.content.toString('utf8'))
+      })
+    })
+  }
 
   const toggleEditable = () => {
     setIsEditable(!isEditable)
@@ -28,7 +41,25 @@ const App = () => {
     setName(e.target.value)
   }
 
-  const onSubmit = () => {}
+  const onSubmit = (e) => {
+
+    console.log("ipfs", ipfs)
+    e.preventDefault();
+    return
+    console.log("name", name)
+
+    const data = {
+      name: name,
+      id: id
+    }
+    const content = Ipfs.Buffer.from(JSON.stringify(data))
+
+    ipfs.add(content).then(function (results) {
+
+      const hash = results[0].hash // "Qm...WW"
+      console.log("hash", hash)
+    })
+  }
 
   let output
   if (isEditable) {
